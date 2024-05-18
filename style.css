@@ -1,0 +1,36 @@
+body{
+    font-family: monospace;
+}
+
+
+.navBar{
+    background-color: black;
+    height: 73px;
+    width: 100%;
+}
+
+.navBar a{
+    text-align: center;
+    color: white;
+    padding: 25px 30px;
+    font-size: 20px;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    background-color: rgb(68, 66, 66);
+    color: white;
+}
+
+#home{
+    background-color: rgb(22, 22, 173);
+    color: white;
+
+}
+
+#home:hover{
+    background-color: rgb(55, 45, 109);
+    color: white;
+}
