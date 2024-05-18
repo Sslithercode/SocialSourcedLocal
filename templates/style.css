@@ -1,18 +1,19 @@
 body{
     font-family: monospace;
+    margin: 0;
 }
 
 
 .navBar{
     background-color: black;
-    height: 73px;
+    height: 4rem;
     width: 100%;
 }
 
 .navBar a{
     text-align: center;
     color: white;
-    padding: 25px 30px;
+    padding: 20px 30px;
     font-size: 20px;
     float: left;
     text-decoration: none;
