@@ -1,37 +1,64 @@
 body{
-    font-family: monospace;
+    font-family: 'Trebuchet MS', sans-serif;
     margin: 0;
+    background-image: url("backgroundImage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
+/*nav bar styles*/
+
 .navBar{
-    background-color: black;
     height: 4rem;
     width: 100%;
+    background-color: rgb(4, 0, 54);
+    box-shadow: 0 5px 4px -2px rgba(0,0,0,.2);
 }
 
 .navBar a{
+    color:rgb(255, 255, 255);
     text-align: center;
-    color: white;
-    padding: 20px 30px;
+    padding: 20.5px 30px;
     font-size: 20px;
     float: left;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 a:hover{
-    background-color: rgb(68, 66, 66);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    background-color: rgb(40, 43, 207);
+    color: rgb(255, 255, 255);
 }
 
-#home{
-    background-color: rgb(22, 22, 173);
-    color: white;
+
+
+/*home page style*/
+.homePageContent{
+    height: 20rem;
+    width: 25rem;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.homePageContent h1{
+    font-size: 50px;
 
 }
 
-#home:hover{
-    background-color: rgb(55, 45, 109);
-    color: white;
+.homePageContent p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn{
+    padding: 20px 30px;
+    background-color: rgb(0, 0, 128);
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
 }
