@@ -3,12 +3,6 @@ body{
     margin: 0;
 }
 
-body#home{
-    background-image: url("backgroundImage.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 
 /*nav bar styles*/
 
@@ -38,6 +32,12 @@ a:hover{
 
 
 /*home page style*/
+body#home{
+    background-image: url("backgroundImage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .homePageContent{
     height: 20rem;
     width: 25rem;
@@ -64,5 +64,53 @@ a:hover{
     font-weight: 600;
     text-decoration: none;
     border-radius: 10px;
+}
+
+/*interact page style*/
+body#interact{
+    background-color: rgb(219, 219, 219);
+}
+.interactDisplay{
+
+    padding:10px;
+    height: 23.7rem;
+    width:71%;
+
+}
+
+.inputBox{
+    position: fixed;
+    bottom: 2rem;
+    width: 75%;
+    height: 7rem;
+
+}
+
+.inputBox input{
+    padding:30px;
+    width: 63.2rem;
+    height: 10rem;
+    box-sizing: border-box;
+    border: none;
+    border-top: 2px solid gray;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    resize: none;
+
+}
+
+.checkBoxes{
+    position:fixed;
+    right:0;
+    top:4rem;
+    height:90%;
+    width:22rem;
+    border:none;
+    border-left: 2px solid gray;
+}
+
+.checkBoxes input{
+    margin-top: 8%;
+    margin-left: 6%;
 }
 

@@ -1,5 +1,36 @@
 {% extends "base.html"%}
 {%block title%} Planning {%endblock%}
+{%block id%}id = "interact"{%endblock%}
 {%block content%}
-<h1>Planning</h1>
+<div class = "interactDisplay">
+    <!--the AI response will display here-->
+    <!--placeholder text, replace later-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class = "checkBoxes">
+    <!--the company available will be displayed here-->
+    <!--placeholder text, replace later-->
+    <input type="checkbox" id = "company1" name = "company1" value = "company1">
+    <label for = "company1">Company1</label>
+    <br>
+    <input type="checkbox" id = "company2" name = "company2" value = "company2">
+    <label for = "company2">Company2</label>
+    <br>
+    <input type="checkbox" id = "company3" name = "company3" value = "company3">
+    <label for = "company3">Company3</label>
+    <br>
+    <input type="checkbox" id = "company4" name = "company4" value = "company4">
+    <label for = "company4">Company3</label>
+    <br>
+</div>
+
+<div class = "inputBox">
+    <form action = "#", method = "post">
+        <input type = "text" name = "userInput" placeholder="Input your need">
+    </form>
+</div>
+
+
+<div class
 {%endblock%}
