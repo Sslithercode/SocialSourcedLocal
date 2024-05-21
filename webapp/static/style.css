@@ -143,4 +143,28 @@ body#home{
     padding:4px 1px;
 }
 
+/*about page styling*/
+body#about{
+    background-image: url("backgroundImage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutPageContent{
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+}
+
+.aboutPageContent h1{
+    font-size: 50px;
+}
+
+.aboutPageContent p{
+    font-size: 30px;
+    font-weight: 500;
+
+}
 
