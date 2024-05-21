@@ -10,11 +10,10 @@ def home():
 @app.route("/planning", methods = ["POST", "GET"])
 def interact():
     if request.method == "POST":
-        response = request.form["userInput"]
-        session["response"] = response  #stored user response in a session 
-        return redirect(url_for("interact")) #must have a return statement so I will just put it like this for now 
+        response = request.form["userInput"]  
+        return render_template("interact.html", answer = response) #must have a return statement so I will just put it like this for now 
     else:
-        return render_template("interact.html")
+        return render_template("interact.html", answer = "")
 
 @app.route("/about")
 def about():    

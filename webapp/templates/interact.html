@@ -4,11 +4,24 @@
 {%block content%}
 
 <div class = "inputBox">
-    <form action = "#", method = "post">
+    <form action = "#" method = "post">
         <input type = "text" name = "userInput" placeholder="Input your need">
     </form>
 </div>
 
+<div class = "output">
+    <div class = "textBubble">
+        <img src = "../static/ai.jpg" alt = "AIProfile">
+        <h2>AI</h2>
+        <p>Hello! How can I help you</p>
+    </div>
 
-<div class
+    <div class = "textBubble">
+        <img src = "../static/user.jpg" alt = "userProfile">
+        <h2>You</h2>
+        <p>{{answer}}</p>
+    </div>
+
+</div>
+
 {%endblock%}
