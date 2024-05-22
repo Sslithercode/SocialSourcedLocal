@@ -3,25 +3,41 @@
 {%block id%}id = "interact"{%endblock%}
 {%block content%}
 
-<div class = "inputBox">
-    <form action = "#" method = "post">
-        <input type = "text" name = "userInput" placeholder="Input your need">
+<div class = "wrapper" id = "wrapper">
+    <div class = "output">
+        <div class = "textBubble">
+            <img src = "../static/ai.jpg" alt = "AIProfile">
+            <h2>Party Planner</h2>
+            <p>Hello! How can I help you</p> <!--{{aiResponse}}-->
+        </div>
+
+        {% for i in data %}
+            <div class = "textBubble">
+                <img src = "../static/user.jpg" alt = "userProfile">
+                <h2>You</h2>
+                <p>{{i}}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class = "inputBox">
+        <form action = "#" method = "post">
+            <input type = "text" id = "userInput" name = "userInput" placeholder="Input your need">
+        </form>
+    </div>
+    <form action="/clean_list" method="post">
+        <input type="submit" id="clearButton" value="Clean conversation">
     </form>
-</div>
-
-<div class = "output">
-    <div class = "textBubble">
-        <img src = "../static/ai.jpg" alt = "AIProfile">
-        <h2>AI</h2>
-        <p>Hello! How can I help you</p> <!--{{aiResponse}}-->
-    </div>
-
-    <div class = "textBubble">
-        <img src = "../static/user.jpg" alt = "userProfile">
-        <h2>You</h2>
-        <p>{{answer}}</p>
-    </div>
 
 </div>
 
+{%endblock%}
+
+{%block script%}
+<script>
+    var message = document.getElementById("wrapper");
+    window.onload = function () {
+        message.scrollTo(0, message.scrollHeight);
+    };
+</script>
 {%endblock%}
