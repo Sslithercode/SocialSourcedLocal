@@ -97,7 +97,7 @@ body#home{
 .inputBox{
     position:fixed;
     bottom:2rem;
-    margin: auto;
+    left:25rem;
     width: 40%;
 }
 .inputBox input{
