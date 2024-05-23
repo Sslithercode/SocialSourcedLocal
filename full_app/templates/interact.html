@@ -7,16 +7,24 @@
     <div class = "output">
         <div class = "textBubble">
             <img src = "../static/ai.jpg" alt = "AIProfile">
-            <h2>Party Planner</h2>
-            <p>Hello! How can I help you</p> <!--{{aiResponse}}-->
+            <h2>SocialPal</h2>
+            <p>Hello! I'm SocialPal, your personal event planning assistant! I'm excited to help you plan an unforgettable social event. Before we get started, can you please tell me what kind of event you're looking to plan? Is it a birthday party, wedding, corporate event, or something else?</p> <!--{{aiResponse}}-->
         </div>
 
         {% for i in data %}
-            <div class = "textBubble">
-                <img src = "../static/user.jpg" alt = "userProfile">
-                <h2>You</h2>
-                <p>{{i}}</p>
-            </div>
+            {% if data.index(i)%2 == 0 %}
+                <div class = "textBubble">
+                    <img src = "../static/user.jpg" alt = "userProfile">
+                    <h2>You</h2>
+                    <p>{{i}}</p>
+                </div>
+            {% else %}
+                <div class = "textBubble">
+                    <img src = "../static/ai.jpg" alt = "AIProfile">
+                    <h2>SocialPal</h2>
+                    <p>{{i}}</p> <!--{{aiResponse}}-->
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
 

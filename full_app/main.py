@@ -9,9 +9,16 @@ from langchain_core.messages import HumanMessage,SystemMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_together import ChatTogether
+# choose from our 50+ models here: https://docs.together.ai/docs/inference-models
+#llama_llm = ChatTogether(
+    #together_api_key="",
+    #model="meta-llama/Llama-3-8b-chat-hf",
+    #streaming = True
+#)
 
 
-llama_llm = Ollama(model="llama3:8b-instruct-q8_0",callbacks=[StreamingStdOutCallbackHandler()])
+#llama_llm = Ollama(model="llama3:8b-instruct-q8_0",callbacks=[StreamingStdOutCallbackHandler()])
 prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -48,10 +55,13 @@ def interact():
     if request.method == "POST":
         user_input = request.form["userInput"]
         messages.append(user_input)
-        messages.append("")
-        stream  = chain_with_message_history.stream( {"input": user_input},{"configurable": {"session_id": "unused"}})
-        for i in chain_with_message_history.stream({"input": user_input}, {"configurable": {"session_id": "unused"}}):
-            messages[-1] += i
+        stream  = chain_with_message_history.invoke( {"input": user_input},{"configurable": {"session_id": "unused"}})
+        messages.append(stream.content)
+        
+        #for i in stream:
+            #messages[-1] += i
+            #print(i)
+        
         return render_template("interact.html", data=messages)
     else:
         return render_template("interact.html", data=messages)
