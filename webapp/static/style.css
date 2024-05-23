@@ -97,7 +97,7 @@ body#home{
 .inputBox{
     position:fixed;
     bottom:2rem;
-    margin-left: 28.5%;
+    margin: auto;
     width: 40%;
 }
 .inputBox input{
@@ -121,7 +121,7 @@ body#home{
 .output{
     width: 60%;
     height: 25rem;
-    margin-left: 20%;
+    margin: auto;
     
 }
 
