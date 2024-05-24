@@ -11,11 +11,11 @@ from langchain.memory import ChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_together import ChatTogether
 # choose from our 50+ models here: https://docs.together.ai/docs/inference-models
-#llama_llm = ChatTogether(
-    #together_api_key="",
-    #model="meta-llama/Llama-3-8b-chat-hf",
-    #streaming = True
-#)
+llama_llm = ChatTogether(
+    together_api_key="",
+    model="meta-llama/Llama-3-8b-chat-hf",
+    streaming = True
+)
 
 
 #llama_llm = Ollama(model="llama3:8b-instruct-q8_0",callbacks=[StreamingStdOutCallbackHandler()])
